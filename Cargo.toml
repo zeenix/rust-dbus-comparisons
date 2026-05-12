@@ -25,6 +25,9 @@ bytes = "1.1.0"
 
 dbus-native = {git = "https://github.com/diwic/dbus-rs", rev = "2c29b4393f2073a019f2c9a2a96b140dd3ceb6ba"}
 
+glib = "0.20"
+gio = "0.20"
+
 [dev-dependencies]
 criterion = "0.4"
 
