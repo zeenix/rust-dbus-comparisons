@@ -5,6 +5,7 @@ use dbus_benches::make_dbus_message_parser_message;
 use dbus_benches::make_dbus_native_message;
 use dbus_benches::make_dbus_pure_message;
 use dbus_benches::make_dbusrs_message;
+use dbus_benches::make_glib_message;
 use dbus_benches::make_rustbus_message;
 use dbus_benches::make_zvariant_derive_message;
 use dbus_benches::make_zvariant_message;
@@ -168,6 +169,11 @@ fn run_marshal_benches(group_name: &str, c: &mut Criterion, parts: &MessageParts
             black_box(make_async_rustbus_message(parts, false));
         });
     });
+    group.bench_function("marshal_glib", |b| {
+        b.iter(|| {
+            black_box(make_glib_message(parts, false));
+        })
+    });
 
     group.finish();
 }
@@ -251,6 +257,11 @@ fn criterion_benchmark(c: &mut Criterion) {
     group.bench_function("send_async_rustbus", |b| {
         b.iter(|| {
             black_box(make_async_rustbus_message(&mixed_parts, true));
+        })
+    });
+    group.bench_function("send_glib", |b| {
+        b.iter(|| {
+            black_box(make_glib_message(&mixed_parts, true));
         })
     });
 

@@ -5,6 +5,7 @@ mod bench_dbus_native;
 mod bench_dbus_pure;
 mod bench_dbusrs;
 mod bench_rustbus;
+mod bench_glib;
 mod bench_zvariant;
 
 pub use bench_async_rustbus::*;
@@ -13,6 +14,7 @@ pub use bench_dbus_message_parser::*;
 pub use bench_dbus_native::*;
 pub use bench_dbus_pure::*;
 pub use bench_dbusrs::*;
+pub use bench_glib::*;
 pub use bench_rustbus::*;
 pub use bench_zvariant::*;
 
