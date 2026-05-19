@@ -9,6 +9,7 @@ This repo tries to give an overview over the landscape of the the different dbus
 1. https://github.com/srwalter/dbus-bytestream
 1. https://github.com/LinkTed/dbus-message-parser
 1. https://github.com/cmaves/async-rustbus
+1. https://github.com/gtk-rs/gtk-rs-core
 
 Note that I am the author of rustbus, but of course I am trying to be as objective as possible here.
 
